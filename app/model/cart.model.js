@@ -38,6 +38,11 @@ var Cart = (function () {
         this.lines.splice(index);
         this.recalculate();
     };
+    Cart.prototype.clear = function () {
+        this.lines = [];
+        this.itemCount = 0;
+        this.cartPrice = 0;
+    };
     Cart.prototype.recalculate = function () {
         var _this = this;
         this.itemCount = 0;
